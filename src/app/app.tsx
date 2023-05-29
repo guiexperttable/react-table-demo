@@ -1,4 +1,4 @@
-import { ComponentRendererWrapper, GeMouseEventFn, ReactTable } from "@guiexpert/react-table";
+import { ComponentRendererWrapper, GeMouseEventFn, GuiexpertTable } from "@guiexpert/react-table";
 import { ColumnDefIf, TableModelFactory, TableOptions } from "@guiexpert/table";
 import {
   applyBodyRenderer,
@@ -25,7 +25,7 @@ export function App() {
 
   return (
     <>
-      <ReactTable
+      <GuiexpertTable
         tableModel={tableModel}
         tableOptions={new TableOptions}
         mouseClicked={console.info as GeMouseEventFn}
