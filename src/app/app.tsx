@@ -1,5 +1,5 @@
 import { ComponentRendererWrapper, GeMouseEventFn, GuiexpertTable } from "@guiexpert/react-table";
-import { ColumnDefIf, TableModelFactory, TableOptions } from "@guiexpert/table";
+import { ColumnDefIf, TreeFactory, TableOptions } from "@guiexpert/table";
 import {
   applyBodyRenderer,
   createColumnDefs,
@@ -16,7 +16,7 @@ export function App() {
   const rows: SimplePersonIf[] = createTableRows();
   const columnDefs: ColumnDefIf[] = createColumnDefs();
   applyBodyRenderer(columnDefs[2], new ComponentRendererWrapper(GenderRendererComponent));
-  const tableModel = TableModelFactory.buildByTypedRowsParam({
+  const tableModel = TreeFactory.buildByTypedRowsParam({
     rows,
     columnDefs,
     tableOptions,
